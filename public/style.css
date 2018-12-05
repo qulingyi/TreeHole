@@ -1,15 +1,120 @@
+body {
+  font-family: 'Patrick Hand';
+}
+
+#app {
+  background-color: #F5F9FA;
+}
+
+#posting {
+  display: none;
+  flex-direction: column;
+  width: 200px;
+  z-index: 100;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+textarea {
+  width: 190px;
+  font-family: 'Patrick Hand';
+  font-size: 15px;
+}
+
+#submit {
+  border: none;
+  margin-top: 10px;
+  font-family: 'Patrick Hand';
+  font-size: 15px;
+}
+
+#posting > input {
+  margin-top: 5px;
+  height: 20px;
+  font-family: 'Patrick Hand';
+  font-size: 15px;
+}
+
 #room_container {
-  display: flex;
-  flex-direction: row;
+  padding-top: 30px;
   margin: 0 auto;
   width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-content: stretch; */
+  align-items: baseline;
 }
 
 #box {
-  height: 150px;
-  line-height:150px;
-  width: 150px;
+  width: 200px;
   margin: 20px 20px;
-  border: 2px solid red;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+#text {
+  overflow-wrap: break-word;
+  text-align: left;
+  margin: 10px 10px;
+  font-family: 'Patrick Hand';
+  font-size: 22px;
+  font-weight: 160;
+}
+
+#img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+#like_comment {
+  display: flex;
+  flex-direction: row;
+}
+
+#comment {
+  width: 20px;
+  height: 20px;
+  padding: 10px 10px;
+}
+
+label {
+  margin-left: auto !important;
+    color: #aab8c2;
+    font-size: 1.3em;
+    cursor: pointer;
+    margin-top: 5px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#EEEEEE;
+}
+
+#write {
+  float: right;
+}
+
+li {
+  float: left;
+  border-right: 1px solid white;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: white;
+}
+
+.active {
+  background-color: #B7EF62;
 }

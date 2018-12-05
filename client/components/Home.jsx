@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import posed, { PoseGroup } from 'react-pose';
 import axios from 'axios';
 import Room from './Room.jsx';
+import Navi from './nav.jsx';
+import Post from './post.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -30,6 +32,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Navi />
+        <Post />
         { this.state.loading &&
           <Room names={this.state.rooms} />}
       </div>

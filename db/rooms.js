@@ -6,6 +6,7 @@ mongoose.Promise = global.Promise;
 
 const roomSchema = new mongoose.Schema({
   name: String,
+  img: String,
 });
 
 const Room = mongoose.model('Room', roomSchema);

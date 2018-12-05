@@ -1,3 +1,5 @@
+//import 'bootstrap/dist/css/bootstrap.css';
+
 const express = require('express');
 
 const app = express();
@@ -11,6 +13,7 @@ const path = require('path');
 const Rooms = require('../db/rooms.js');
 
 const db = require('../db/index.js');
+
 
 app.use(bodyParser.json());
 
@@ -27,6 +30,10 @@ app.get('/rooms', (req, res) => {
       res.send(result);
     }
   });
+});
+
+app.post('/post', (req, res) => {
+  Rooms.create({ name: req.body.name, img: req.body.image });
 });
 
 app.listen(port, () => {
